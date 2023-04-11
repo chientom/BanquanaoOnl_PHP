@@ -1,0 +1,38 @@
+.form-group {
+    display: grid;
+    /* padding: 10px; */
+    margin: 25px;
+    grid-gap:1px;
+    grid-template-columns:15% auto;
+}
+button {
+    cursor: pointer;
+    background: var(--main-color);
+    border-radius: 10px;
+    color: white;
+    font-size: 13px;
+    padding: 8px 16px;
+    border: 1px solid var(--main-color);
+}
+button.btn-cancel {
+    background-color: grey;
+    border: 1px solid grey;
+}
+.box-footer {
+    display: flex;
+    justify-content: space-between;
+}
+label.col-sm-2.control-label {
+    width: 100%;
+}
+header{
+    background-color: white ;
+    z-index: 1;
+}
+#btn-update{
+    text-decoration: none;
+    color: #6c757d;
+}
+a:hover{
+    text-decoration: none;
+}

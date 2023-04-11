@@ -1,0 +1,73 @@
+public function update(){
+            $brand_model = new Brand();
+            $brands = $brand_model->showIn();
+            $id = $_GET['id'];
+            $messag="";
+            $product_model = new Product();
+            $products = $product_model->getProductById($id);;
+
+               if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+                $_SESSION['error'] = 'ID category không hợp lệ';
+                header('Location: index.php?controller=category&action=index');
+                exit();
+                if(isset($_POST['update'])) {
+                $name = $_POST['name'];
+                $image =$_FILES['image'];
+                $brand = $_POST['brand'];
+                $date=$_POST['date'];
+                $price =$_POST['gia'];
+                $discount = $_POST['discount'];
+                $soluong = $_POST['soluong'];
+                $pricediscount = $_POST['giakhuyenmai'];
+                $description =$_POST['description'];       
+                if (empty($name)) {
+                    $this->error = 'Không được để trống title';
+                  } else if ($price) {
+                    $this->error = 'Không được để trống giá của sản phẩm';
+                  }else if ($soluong) {
+                    $this->error = 'Không được để trống số lượng của sản phẩm';
+                  }
+                  if (empty($this->error)) {
+                    $filename = '';
+                    //xử lý upload file nếu có
+                    if ($_FILES['image']['error'] == 0) {
+                      $dir_uploads = 'assets/uploads';
+                      if (!file_exists($dir_uploads)) {
+                        mkdir($dir_uploads);
+                      }
+                      //tạo tên file theo 1 chuỗi ngẫu nhiên để tránh upload file trùng lặp
+                      $filename = time() . '-product-' . $_FILES['image']['name'];
+                      move_uploaded_file($_FILES['image']['tmp_name'], $dir_uploads . '/' . $filename);
+                       //save dữ liệu vào bảng products
+                    $product_model = new Product();
+                    $is_insert = $product_model->UpdateProduct($id,$name,$price,$filename,$brand,$description,$date,$discount,$pricediscount,$soluong);
+                    // if ($is_insert) {
+                    //   $_SESSION['success'] = 'Insert dữ liệu thành công';
+                    // } else {
+                    //   $_SESSION['error'] = 'Insert dữ liệu thất bại';
+                    // }
+                    // header('Location: index.php?controller=product');
+                    // exit();
+                    $message = $is_insert ? "Update dữ liệu thành công" : "Update dữ liệu không thành công";
+                    }
+                   
+                  }
+    
+           
+   
+        }
+                 $this->page_title = 'Thêm sản phẩm';
+            $this -> content =
+                $this-> render('views\categories\product\update.php', [
+                    'error' => $this->error,
+                    'products' => $products,
+                    'id'=> $id,
+                   
+                    'brands' => $brands,
+                    'message' => $message
+
+                    
+                ]);
+              
+            require_once 'views/layouts/product.php';
+    }
