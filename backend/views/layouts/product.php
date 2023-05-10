@@ -1,3 +1,11 @@
+<?php
+session_start();
+$username = '';
+if (isset($_SESSION['user'])) {
+    $username = $_SESSION['user']['username'];
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,7 +93,7 @@
                 </div>
             </div>
         </header>
-        <main>
+        <mai<?php echo $username; ?>
             <div class="recent-grid">
 
                 <?php

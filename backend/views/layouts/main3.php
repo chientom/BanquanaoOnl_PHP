@@ -1,4 +1,4 @@
-<main>
+    <main>
             <div class="cards">
                 <div class="card-single">
                     <div>

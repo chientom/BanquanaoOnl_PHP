@@ -31,7 +31,8 @@ class User extends Model {
             ':username' => $username
         ];
         $obj_select_one->execute($selects);
-        return $obj_select_one->fetch(PDO::FETCH_ASSOC);
+         $user=$obj_select_one->fetch(PDO::FETCH_ASSOC);
+         return $user;
     }
 }
 

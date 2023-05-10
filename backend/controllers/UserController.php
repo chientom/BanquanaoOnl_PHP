@@ -2,6 +2,8 @@
 require_once 'models/Users.php';
 require_once 'controllers/Controller.php';
 class UserController extends Controller {
+ 
+  
     
     //  index.php?controller=user&action=register
     public function register(){
@@ -86,7 +88,7 @@ class UserController extends Controller {
                         $_SESSION['user'] = $user;
                         header('location:index.php?controller=category&action=index');
                         // header('location:views/layouts/main.php');
-                        exit();
+                        exit(); 
                     }
                     $this->error='Sai mật khẩu';
                 }

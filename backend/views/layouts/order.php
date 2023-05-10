@@ -1,3 +1,11 @@
+<?php
+session_start();
+$username = '';
+if (isset($_SESSION['user'])) {
+    $username = $_SESSION['user']['username'];
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +88,7 @@
             <div class="user-wrapper">
                 <img src="assets/images/sep.jpg" width="30px" height="30px" alt="">
                 <div>
-                    <h4>Chien Tom</h4>
+                    <h4><?php echo $username; ?></h4>
                     <small> Giám đốc điều hành</small>
                 </div>
             </div>
