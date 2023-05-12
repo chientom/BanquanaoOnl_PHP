@@ -82,7 +82,7 @@
 
 		<!-- Main Navigation -->
 
-		<div class="main_nav_container">
+		<div class="main_nav_container"> 
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-right">

@@ -25,10 +25,10 @@
 
                 $this->page_title = 'Sản phẩm của chúng tôi';
                 $this->content =
-                    $this->render('views/categories/home/index.php',[
+                    $this->render('views/categories/product/store.php',[
                         'products' => $product,
                     ]);
-                    require_once 'views/layout/main.php';
+                    require_once 'views/layout/mainstore.php';
             }
         }
 ?>
