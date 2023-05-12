@@ -90,7 +90,7 @@
 									<div class="product_price"><?php echo $home_value['giakhuyenmai'];?> Đ<span><?php echo $home_value['Gia'];?> Đ</span></div>
 								</div>
 							</div>
-							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+							<div class="red_button add_to_cart_button"><a href="index.php?controller=cart&action=store&id=<?php  echo $home_value['ID'] ?>">add to cart</a></div>
 						</div>
 						<?php endforeach
 						?>

@@ -12,7 +12,7 @@
 				</div>
 
 			</div>
-		</div>
+</div>
 		<div class="row">
 			<div class="col-lg-7">
 				<div class="single_product_pics">
@@ -23,7 +23,7 @@
 								<ul>
 									<!-- <li><img src="../../../../backend/uploads/" alt="" data-image="assets/images/single_1.jpg"></li> -->
 
-									<li><img src="../backend/uploads/<?php echo $single['HinhAnh'];?>" alt=""></li>
+									<li><img src="../backend/assets/uploads/<?php echo $single['HinhAnh'];?>" alt=""></li>
 									<li class="active"><img src="assets/images/single_2_thumb.jpg" alt="" data-image="assets/images/single_2.jpg"></li>
 									<li><img src="assets/images/single_3_thumb.jpg" alt="" data-image="assets/images/single_3.jpg"></li>
 								</ul>
@@ -31,7 +31,7 @@
 						</div>
 						<div class="col-lg-9 image_col order-lg-2 order-1">
 							<div class="single_product_image">
-								<div class="single_product_image_background" style="background-image:url(../backend/uploads/<?php echo $single['HinhAnh'];?>)"></div>
+								<div class="single_product_image_background" style="background-image:url(../backend/assets/uploads/<?php echo $single['HinhAnh'];?>)"></div>
 							</div>
 						</div>
 			
@@ -41,7 +41,7 @@
 			<div class="col-lg-5">
 				<div class="product_details">
 					<div class="product_details_title as">
-						<h2>Pocket cotton sweatshirt</h2>
+						<h2><?php echo $single['Ten'];?></h2>
 						<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut...</p>
 					</div>
 					<div class="free_delivery d-flex flex-row align-items-center justify-content-center">
@@ -71,7 +71,7 @@
 							<span id="quantity_value">1</span>
 							<span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
 						</div>
-						<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						<div class="red_button add_to_cart_button"><a href="index.php?controller=cart&action=store&id=<?php  echo $home_value['ID'] ?>">add to cart</a></div>
 						<div class="product_favorite d-flex flex-column align-items-center justify-content-center"></div>
 					</div>
 				</div>

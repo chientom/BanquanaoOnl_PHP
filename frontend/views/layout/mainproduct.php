@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/single.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/single_responsive.css">
-    <link rel="stylesheet" type="text/css" href="assets/styles/2.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/stylesingle.css">
 </head>
 </head>
 

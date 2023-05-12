@@ -1595,3 +1595,6 @@ section
 {
 	color: #fe4c50;
 }
+.container.contact_container {
+    margin-top: 150px;
+}

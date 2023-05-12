@@ -77,7 +77,7 @@ if (isset($_SESSION['user'])) {
                     <span class="las la-bars"></span>
                 </label>
                 <?php
-                
+                    
                      echo $this->page_title;
                 ?>
             </h2>
